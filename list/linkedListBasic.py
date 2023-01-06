@@ -38,3 +38,15 @@ class LinkedListBasic:
 
     def extend():
         pass
+
+    def __getNode(self, pos):
+        """Returns the node at a given position."""
+
+        if pos < 0 or pos >= self.__numItem:
+            raise IndexError('list index out of range')
+
+        else:
+            currNode = self.__head.next
+            for i in range(pos):
+                currNode = currNode.next
+            return currNode
