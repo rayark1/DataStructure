@@ -7,11 +7,22 @@ class LinkedListBasic:
         self.__head = ListNode('dummy', None)
         self.__numItem = 0
 
-    def insert():
-        pass
+    def insert(self, item, pos):
+        """Inserts an item at a given position."""
 
-    def append():
-        pass
+        if pos < 0 or pos > self.__numItem:
+            raise IndexError('list index out of range')
+
+        else:
+            targetNode = __getNode(self, pos-1)
+            newNode = ListNode(item, targetNode.next)
+            targetNode.next = newNode
+            self.__numItem += 1
+
+    def append(self, item):
+        """Appends an item to the end of the list."""
+
+        self.insert(item, self.__numItem)
 
     def pop():
         pass
