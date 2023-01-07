@@ -37,14 +37,17 @@ class LinkedListBasic:
             self.__numItem -= 1
             return item
 
-    def remove():
+    def remove(self, item):
         pass
 
     def index():
         pass
 
-    def clear():
-        pass
+    def clear(self):
+        """Removes all items from the list."""
+
+        self.__head.next = None
+        self.__numItem = 0
 
     def count():
         pass
