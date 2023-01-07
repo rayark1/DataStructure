@@ -49,6 +49,11 @@ class LinkedListBasic:
         self.__head.next = None
         self.__numItem = 0
 
+    def isEmpty(self):
+        """Returns True if the list is empty, False otherwise."""
+
+        return self.__numItem == 0
+
     def count():
         pass
 
