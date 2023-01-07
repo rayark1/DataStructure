@@ -102,8 +102,11 @@ class LinkedListBasic:
             copy.append(self.get(i))
         return copy
 
-    def extend():
-        pass
+    def extend(self, extendList) -> LinkedListBasic():
+        """Appends the items from extendList to the end of the list."""
+
+        for i in range(extendList.size()):
+            self.append(extendList.get(i))
 
     def __getNode(self, pos):
         """Returns the node at a given position."""
