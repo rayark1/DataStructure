@@ -91,8 +91,16 @@ class LinkedListBasic:
     def sort():
         pass
 
-    def copy():
         pass
+
+
+    def copy(self) -> LinkedListBasic():
+        """Returns a copy of the list."""
+
+        copy = LinkedListBasic()
+        for i in range(self.__numItem):
+            copy.append(self.get(i))
+        return copy
 
     def extend():
         pass
