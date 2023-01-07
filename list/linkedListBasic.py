@@ -73,9 +73,17 @@ class LinkedListBasic:
         """Returns the number of items in the list."""
 
         return self.__numItem
-        
-    def count():
-        pass
+
+    def count(self, item):
+        """Returns the number of occurrences of item."""
+
+        count = 0
+        currNode = self.__head.next
+        for i in range(self.__numItem):
+            if currNode.item == item:
+                count += 1
+            currNode = currNode.next
+        return count
 
     def reverse():
         pass
