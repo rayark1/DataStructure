@@ -62,6 +62,11 @@ class LinkedListBasic:
 
         return self.__numItem == 0
 
+    def size(self):
+        """Returns the number of items in the list."""
+
+        return self.__numItem
+        
     def count():
         pass
 
