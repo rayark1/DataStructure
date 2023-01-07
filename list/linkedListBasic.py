@@ -4,7 +4,8 @@ from DataStructure.list.listNode import ListNode
 
 class LinkedListBasic:
     def __init__(self):
-        pass
+        self.__head = ListNode('dummy', None)
+        self.__numItem = 0
 
     def insert():
         pass
