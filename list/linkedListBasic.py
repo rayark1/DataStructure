@@ -3,6 +3,8 @@ from DataStructure.list.listNode import ListNode
 
 
 class LinkedListBasic:
+    """This class implements a linked list data structure."""
+
     def __init__(self):
         self.__head = ListNode('dummy', None)
         self.__numItem = 0
