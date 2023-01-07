@@ -38,7 +38,15 @@ class LinkedListBasic:
             return item
 
     def remove(self, item):
-        pass
+        """Removes the first occurrence of item."""
+
+        currNode = self.__head
+        while currNode.next != None:
+            if currNode.next.item == item:
+                currNode.next = currNode.next.next
+                self.__numItem -= 1
+                return
+            currNode = currNode.next
 
     def index():
         pass
