@@ -48,8 +48,15 @@ class LinkedListBasic:
                 return
             currNode = currNode.next
 
-    def index():
-        pass
+    def index(self, item):
+        """Returns the position of the first occurrence of item."""
+
+        currNode = self.__head.next
+        for i in range(self.__numItem):
+            if currNode.item == item:
+                return i
+            currNode = currNode.next
+        raise ValueError('list.index(x): x not in list')
 
     def clear(self):
         """Removes all items from the list."""
