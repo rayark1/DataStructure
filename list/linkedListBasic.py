@@ -24,8 +24,18 @@ class LinkedListBasic:
 
         self.insert(item, self.__numItem)
 
-    def pop():
-        pass
+    def pop(self, pos):
+        """Removes and returns the item at the given position."""
+
+        if pos < 0 or pos >= self.__numItem:
+            raise IndexError('list index out of range')
+
+        else:
+            targetNode = __getNode(self, pos-1)
+            item = targetNode.next.item
+            targetNode.next = targetNode.next.next
+            self.__numItem -= 1
+            return item
 
     def remove():
         pass
