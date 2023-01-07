@@ -88,11 +88,15 @@ class LinkedListBasic:
     def reverse():
         pass
 
-    def sort():
-        pass
+    def sort(self) -> None:
+        """Sorts the list in ascending order."""
 
-        pass
-
+        a = []
+        for i in range(self.__numItem):
+            a.append(self.pop(0))
+        a.sort()
+        for i in range(len(a)):
+            self.append(a[i])
 
     def copy(self) -> LinkedListBasic():
         """Returns a copy of the list."""
