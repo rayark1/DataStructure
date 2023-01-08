@@ -1,5 +1,5 @@
 # import the ListNode class
-from DataStructure.list.listNode import ListNode
+from listNode import ListNode
 
 
 class LinkedListBasic:
