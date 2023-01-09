@@ -125,20 +125,16 @@ class LinkedListBasic:
             copy.append(self.get(i))
         return copy
 
-    def extend(self, extendList) -> LinkedListBasic():
+    def extend(self, extendList):
         """Appends the items from extendList to the end of the list."""
 
         for i in range(extendList.size()):
             self.append(extendList.get(i))
 
-    def __getNode(self, pos):
+    def __getNode(self, pos: int):
         """Returns the node at a given position."""
 
-        if pos < 0 or pos >= self.__numItem:
-            raise IndexError('list index out of range')
-
-        else:
-            currNode = self.__head.next
-            for i in range(pos):
-                currNode = currNode.next
-            return currNode
+        currNode = self.__head
+        for i in range(pos + 1):
+            currNode = currNode.next
+        return currNode
