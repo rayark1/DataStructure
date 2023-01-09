@@ -97,13 +97,15 @@ class LinkedListBasic:
             currNode = currNode.next
         return count
 
-    def reverse():
+    def reverse(self):
         """Reverses the items in the list."""
 
         a = LinkedListBasic()
         for i in range(self.__numItem):
-            a.append(self.pop(0))
-        self = a.copy()
+            a.insert(0, self.get(i))
+        self.clear()
+        for i in range(a.__numItem):
+            self.append(a.get(i))
 
     def sort(self) -> None:
         """Sorts the list in ascending order."""
