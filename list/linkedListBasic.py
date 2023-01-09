@@ -117,7 +117,7 @@ class LinkedListBasic:
         for i in range(len(a)):
             self.append(a[i])
 
-    def copy(self) -> LinkedListBasic():
+    def copy(self) -> 'LinkedListBasic()':
         """Returns a copy of the list."""
 
         copy = LinkedListBasic()
