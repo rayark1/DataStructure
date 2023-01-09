@@ -50,6 +50,16 @@ class LinkedListBasic:
                 return
             currNode = currNode.next
 
+    def get(self, pos):
+        """Returns the item at the given position."""
+
+        if pos < 0 or pos >= self.__numItem:
+            raise IndexError('list index out of range')
+        elif self.isEmpty():
+            raise IndexError('list is empty')
+        else:
+            return self.__getNode(pos).item
+
     def index(self, item):
         """Returns the position of the first occurrence of item."""
 
