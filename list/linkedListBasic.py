@@ -29,15 +29,18 @@ class LinkedListBasic:
     def pop(self, pos):
         """Removes and returns the item at the given position."""
 
-        if pos < 0 or pos >= self.__numItem:
-            raise IndexError('list index out of range')
+        if self.isEmpty():
+            raise IndexError('list is empty')
 
-        else:
-            targetNode = __getNode(self, pos-1)
+        if pos >= 0 and pos <= self.__numItem:
+            targetNode = self.__getNode(pos-1)
             item = targetNode.next.item
             targetNode.next = targetNode.next.next
             self.__numItem -= 1
             return item
+
+        else:
+            raise IndexError('list index out of range')
 
     def remove(self, item):
         """Removes the first occurrence of item."""
