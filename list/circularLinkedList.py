@@ -15,6 +15,18 @@ class CircularLinkedList:
 
         return CircularLinkedListIterator(self.__tail)
 
+    def insert(self, i:int, newItem) -> None:
+        """Inserts the element newItem at position i."""
+
+        if (i >= 0 and i <= self.__numItem):
+            p = self.__tail
+            for j in range(i):
+                p = p.next
+            newNode = ListNode(newItem, p.next)
+            p.next = newNode
+            self.__numItem += 1
+        else:
+            raise IndexError("List index out of range")
 
 class CircularLinkedListIterator:
     """This class implements an iterator for a circular linked list."""
