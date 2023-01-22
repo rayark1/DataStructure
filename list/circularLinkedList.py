@@ -28,6 +28,11 @@ class CircularLinkedList:
         else:
             raise IndexError("List index out of range")
 
+    def append(self, newItem) -> None:
+        """Inserts the element newItem at the end of the list."""
+
+        self.insert(self.__numItem, newItem)
+
 class CircularLinkedListIterator:
     """This class implements an iterator for a circular linked list."""
 
