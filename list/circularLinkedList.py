@@ -28,7 +28,6 @@ class CircularLinkedList:
 
     def append(self, newItem) -> None:
         """Inserts the element newItem at the end of the list."""
-
         self.insert(self.__numItem, newItem)
 
 class CircularLinkedListIterator:
