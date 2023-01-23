@@ -20,7 +20,7 @@ class CircularLinkedList:
 
         if (i >= 0 and i <= self.__numItem):
             p = self.__tail
-            for j in range(i):
+            for j in range(i + 1):
                 p = p.next
             newNode = ListNode(newItem, p.next)
             p.next = newNode
