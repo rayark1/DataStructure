@@ -30,6 +30,14 @@ class CircularLinkedList:
         """Inserts the element newItem at the end of the list."""
         self.insert(self.__numItem, newItem)
 
+    def pop(self, *args:int):
+        if self.isEmpty():
+            raise IndexError("List is empty")
+        if len(args) != 0: # 값이 있으면 그 값이 i가 된다.
+            i = args[0]
+        if len(args) == 0 or i == -1: # 값이 없거나 -1이면 마지막 값이 i가 된다.
+            i = self.__numItem - 1
+
 class CircularLinkedListIterator:
     """This class implements an iterator for a circular linked list."""
 
