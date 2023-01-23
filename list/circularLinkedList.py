@@ -38,6 +38,16 @@ class CircularLinkedList:
         if len(args) == 0 or i == -1: # 값이 없거나 -1이면 마지막 값이 i가 된다.
             i = self.__numItem - 1
 
+    def get(self, i:int):
+        """Returns the element at position i."""
+        if self.isEmpty():
+            raise IndexError("List is empty")
+        currNode = self.__tail.next # index -1
+        if (i >= 0 and i < self.__numItem):
+            for j in range(i):
+                currNode = currNode.next
+            return currNode.item
+
 class CircularLinkedListIterator:
     """This class implements an iterator for a circular linked list."""
 
