@@ -12,12 +12,10 @@ class CircularLinkedList:
 
     def __iter__(self):
         """Returns the list's iterator for traversing the list."""
-
         return CircularLinkedListIterator(self.__tail)
 
     def insert(self, i:int, newItem) -> None:
         """Inserts the element newItem at position i."""
-
         if (i >= 0 and i <= self.__numItem):
             p = self.__tail
             for j in range(i + 1):
