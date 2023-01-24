@@ -17,18 +17,23 @@ class CircularLinkedList:
     def insert(self, i:int, newItem) -> None:
         """Inserts the element newItem at position i."""
         if (i >= 0 and i <= self.__numItem):
-            p = self.__tail
-            for j in range(i + 1):
+            p = self.__tail.next # index -1
+            for j in range(i):
                 p = p.next
             newNode = ListNode(newItem, p.next)
             p.next = newNode
+            if i == self.__numItem:
+                self.__tail = newNode
             self.__numItem += 1
         else:
             raise IndexError("List index out of range")
 
     def append(self, newItem) -> None:
         """Inserts the element newItem at the end of the list."""
-        self.insert(self.__numItem, newItem)
+        newItem = ListNode(newItem, self.__tail.next)
+        self.__tail.next = newItem
+        self.__tail = newItem
+        self.__numItem += 1
 
     def pop(self, *args:int):
         if self.isEmpty():
