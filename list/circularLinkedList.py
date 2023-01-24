@@ -49,7 +49,7 @@ class CircularLinkedList:
             raise IndexError("List is empty")
         currNode = self.__tail.next # index -1
         if (i >= 0 and i < self.__numItem):
-            for j in range(i):
+            for j in range(i + 1):
                 currNode = currNode.next
             return currNode.item
 
