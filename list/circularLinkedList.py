@@ -48,6 +48,10 @@ class CircularLinkedList:
                 currNode = currNode.next
             return currNode.item
 
+    def isEmpty(self) -> bool:
+        """Returns True if the list is empty or False otherwise."""
+        return self.__numItem == 0
+
 class CircularLinkedListIterator:
     """This class implements an iterator for a circular linked list."""
 
