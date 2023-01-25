@@ -73,6 +73,12 @@ class CircularLinkedList:
         """Returns the number of items in the list."""
         return self.__numItem
 
+    def clear(self):
+        """Makes the list empty."""
+        self.__tail = ListNode('dummy', None)
+        self.__tail.next = self.__tail
+        self.__numItem = 0
+
 class CircularLinkedListIterator:
     """This class implements an iterator for a circular linked list."""
 
