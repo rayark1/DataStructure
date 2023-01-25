@@ -79,6 +79,14 @@ class CircularLinkedList:
         self.__tail.next = self.__tail
         self.__numItem = 0
 
+    def count(self, x) -> int:
+        cnt = 0
+        for element in self:
+            if element == x:
+                cnt += 1
+        return cnt
+
+
 class CircularLinkedListIterator:
     """This class implements an iterator for a circular linked list."""
 
