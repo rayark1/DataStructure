@@ -57,6 +57,10 @@ class CircularLinkedList:
         """Returns True if the list is empty or False otherwise."""
         return self.__numItem == 0
 
+    def size(self) -> int:
+        """Returns the number of items in the list."""
+        return self.__numItem
+
 class CircularLinkedListIterator:
     """This class implements an iterator for a circular linked list."""
 
