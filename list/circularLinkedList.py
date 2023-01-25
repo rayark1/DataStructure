@@ -42,6 +42,18 @@ class CircularLinkedList:
             i = args[0]
         if len(args) == 0 or i == -1: # 값이 없거나 -1이면 마지막 값이 i가 된다.
             i = self.__numItem - 1
+        if (i >= 0 and i < self.__numItem):
+            p = self.__tail.next # index -1
+            for j in range(i):
+                p = p.next
+            item = p.next.item
+            p.next = p.next.next
+            if i == self.__numItem - 1:
+                self.__tail = p
+            self.__numItem -= 1
+            return item
+        else:
+            raise IndexError("List index out of range")
 
     def get(self, i:int):
         """Returns the element at position i."""
