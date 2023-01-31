@@ -55,6 +55,12 @@ class CircularLinkedList:
         else:
             raise IndexError("List index out of range")
 
+    def remove(self, item) -> None:
+        """Removes the element equal to item from the list."""
+        if self.isEmpty():
+            raise IndexError("List is empty")
+        p = self.__tail.next # index -1
+
     def get(self, i:int):
         """Returns the element at position i."""
         if self.isEmpty():
@@ -86,6 +92,10 @@ class CircularLinkedList:
                 cnt += 1
         return cnt
 
+    def printList(self) -> None:
+        for element in self:
+            print(element, end=' ')    
+        print()
 
 class CircularLinkedListIterator:
     """This class implements an iterator for a circular linked list."""
